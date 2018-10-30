@@ -447,7 +447,7 @@ def gstaad(NS,DZ):
 		if S == '2':
 			print 'Good-Bye'
 			exit
-def vybork(Ns,DZ):
+def vyborg(NS,DZ):
 	Q = distance(DZ,NS)
 	P = direction(DZ,NS)
 	rus = Archerloc[9,0],Archerloc[9,1]
@@ -468,7 +468,7 @@ def vybork(Ns,DZ):
 		print 'You are in Vyborg'
 		print "Archers location is", Q, P,'of your current location...'
 		print "These are the locations you can travel from your current location:"
-		print '1. Moscow is', PD,'to the', PD1
+		print '1. Moscow is', RD,'to the', RD1
 		print '2. Quit'
 		S = raw_input('please make your selection: ')
 		if S == '1':
@@ -509,8 +509,8 @@ def opening():
 def main():
 	print 'Welcome to Where in the World is Archer!'
 	print ''
-	run = input('Would you like to play?? (y=1/n=2)')
-	if run == 1:
+	run = raw_input('Would you like to play?? (y=1/n=2)')
+	if run == 1 or run == 'y':
 		A = opening()
 		R = (randint(0,4))
 		E = travel(R)
